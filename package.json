@@ -1,0 +1,20 @@
+{
+  "name": "nodebasics",
+  "version": "1.0.0",
+  "description": "CompleteNodeGuide",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vidit0210/NodeUdemy.git"
+  },
+  "author": "Vidit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vidit0210/NodeUdemy/issues"
+  },
+  "homepage": "https://github.com/vidit0210/NodeUdemy#readme"
+}
