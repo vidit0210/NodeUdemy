@@ -7,7 +7,6 @@ function requestListener(req, res) {}
 //http.createServer(requestListener);
 
 const server = http.createServer(routes);
-
 server.listen(3000,()=>{
   console.log('Listening to port 3000');
 });
