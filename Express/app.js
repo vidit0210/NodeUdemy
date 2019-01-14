@@ -1,15 +1,23 @@
 const express = require("express"); //exports a function
 const app = express();
 const http = require("http");
-app.use((req, res, next) => {
-  console.log("In the MiddleWare");
+// app.use((req, res, next) => {
+//   console.log("In the MiddleWare");
+//   next(); // Allows the request to the next middleware
+// });
 
-  next(); // Allows the request to the next middleware
+app.use("/add-product", (req, res) => {
+  res.send("<p>Add Product Page</p>");
 });
-app.use((req, res, next) => {
-  console.log("Came from Initial Middleware");
-  res.send("<h2>Hello from Express</h2>");
+app.use("/", (req, res) => {
+  res.send("Default Page");
 });
-app.listen(3003,()=>{
-    console.log('Listening to The 3003');
-}) //Creates Port and Listen to the Server
+
+// app.use((req, res, next) => {
+//   console.log("Came from Initial Middleware");
+//   res.send("<h2>Hello from Express</h2>");
+// });
+
+app.listen(3003, () => {
+  console.log("Listening to The 3003");
+}); //Creates Port and Listen to the Server
