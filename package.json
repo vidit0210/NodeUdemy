@@ -19,5 +19,8 @@
   "homepage": "https://github.com/vidit0210/NodeUdemy#readme",
   "devDependencies": {
     "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3"
   }
 }
