@@ -10,6 +10,7 @@ const path = require("path");
 //   next(); // Allows the request to the next middleware
 // });
 app.use(bodyParser.urlencoded({ extended: false })); // Handles request body Parsing
+app.use(express.static(path.join(__dirname,'public'))) //Serve Static Files like CSS
 app.use("/admin", adminRoutes);
 app.use(ShopRoutes);
 app.use("/", (req, res, nex) => {
