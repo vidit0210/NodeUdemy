@@ -3,10 +3,10 @@ const app = express();
 const path = require("path");
 const bodyParser = require("body-parser");
 const mainRouter = require("./routes/index");
-const PORT = 3000;
+const PORT = 3001;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
-app.use(express.static(path.join(__dirname,'public'))) //Serve Static Files like CSS
+//app.use(express.static(path.join(__dirname,'public'))) //Serve Static Files like CSS
 
 app.use(mainRouter);
 app.use("/", (req, res, next) => {
@@ -16,3 +16,4 @@ app.use("/", (req, res, next) => {
 app.listen(PORT, () => {
   console.log("Listening to Port", PORT);
 });
+
