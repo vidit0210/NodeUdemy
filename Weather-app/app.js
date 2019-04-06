@@ -1,6 +1,6 @@
 const geocode = require('./Utils/geocode')
 const forecast = require('./Utils/forecast')
-let city = process.argv[2]
+let city = "Mumbai"
 if (!city) {
     console.log('Please enter City')
 } else {
