@@ -17,6 +17,8 @@ const geocode = require('./utils/geocode');
 const pathToPublicDirectory = path.join(__dirname, '../public')
 const pathToViewDirectory = path.join(__dirname, '../templates/views')
 const partialsDirectory = path.join(__dirname, '../templates/partials')
+
+const port = process.env.PORT || 3000;
 hbs.registerPartials(partialsDirectory)
 
 app.set('view engine', 'hbs')
@@ -94,6 +96,6 @@ app.get('*', (req, res) => {
     res.render('404')
 
 })
-app.listen(3000, () => {
-    console.log('Listening to Port 3000')
+app.listen(port, () => {
+    console.log('Listening to Port', port)
 })
